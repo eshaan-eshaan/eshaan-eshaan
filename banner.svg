@@ -29,14 +29,15 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 
 
 
+
   /* Retro Arcade Snake Game (Vertical) */
   .s-head,.s-body,.s-food{shape-rendering:crispEdges;transform-box:fill-box;transform-origin:center}
   .s-head{animation:snake-move 8s linear infinite}
   .s-body{animation:snake-move 8s linear infinite}
-  .s-b1{animation-delay:-0.1s}
-  .s-b2{animation-delay:-0.2s}
-  .s-b3{animation-delay:-0.3s}
-  .s-b4{animation-delay:-0.4s}
+  .s-b1{animation-delay:-0.0485s}
+  .s-b2{animation-delay:-0.097s}
+  .s-b3{animation-delay:-0.1455s}
+  .s-b4{animation-delay:-0.194s}
   .s-food{opacity:0}
   .f1{animation:food1-op 8s linear infinite}
   .f2{animation:food2-op 8s linear infinite}
@@ -48,40 +49,40 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
   .sc3{animation:scoreOp3 8s step-end infinite}
   .sc4{animation:scoreOp4 8s step-end infinite}
   @keyframes snake-move {
-    0% { transform: translate(20px, 45px); }
-    31.25% { transform: translate(20px, 145px); }
-    50.0% { transform: translate(80px, 145px); }
-    81.25% { transform: translate(80px, 45px); }
-    100% { transform: translate(20px, 45px); }
+    0% { transform: translate(20px, 50px); }
+    40.9% { transform: translate(20px, 320px); }
+    50.0% { transform: translate(80px, 320px); }
+    90.9% { transform: translate(80px, 50px); }
+    100% { transform: translate(20px, 50px); }
   }
   @keyframes food1-op {
-    0%, 4.0%, 8.0%, 12.0%, 15.5% { opacity: 1; }
-    2.0%, 6.0%, 10.0%, 14.0% { opacity: 0.3; }
-    15.6%, 100% { opacity: 0; }
+    0%, 5.0%, 10.0%, 15.0%, 20.4% { opacity: 1; }
+    2.5%, 7.5%, 12.5%, 17.5% { opacity: 0.3; }
+    20.5%, 100% { opacity: 0; }
   }
   @keyframes food2-op {
-    0%, 15.5% { opacity: 0; }
-    15.6%, 22.0%, 28.0%, 34.0%, 40.5% { opacity: 1; }
-    18.7%, 25.0%, 31.0%, 37.0% { opacity: 0.3; }
-    40.6%, 100% { opacity: 0; }
+    0%, 20.4% { opacity: 0; }
+    20.5%, 27.0%, 33.0%, 39.0%, 45.4% { opacity: 1; }
+    23.7%, 30.0%, 36.0%, 42.0% { opacity: 0.3; }
+    45.5%, 100% { opacity: 0; }
   }
   @keyframes food3-op {
-    0%, 40.5% { opacity: 0; }
-    40.6%, 47.0%, 53.0%, 59.0%, 68.7% { opacity: 1; }
-    43.7%, 50.0%, 56.0%, 62.0% { opacity: 0.3; }
-    68.8%, 100% { opacity: 0; }
+    0%, 45.4% { opacity: 0; }
+    45.5%, 52.0%, 58.0%, 64.0%, 70.4% { opacity: 1; }
+    48.7%, 55.0%, 61.0%, 67.0% { opacity: 0.3; }
+    70.5%, 100% { opacity: 0; }
   }
   @keyframes food4-op {
-    0%, 68.7% { opacity: 0; }
-    68.8%, 75.0%, 81.0%, 88.0%, 93.7% { opacity: 1; }
-    71.7%, 78.0%, 84.0%, 90.0% { opacity: 0.3; }
-    93.8%, 100% { opacity: 0; }
+    0%, 70.4% { opacity: 0; }
+    70.5%, 77.0%, 83.0%, 89.0%, 95.4% { opacity: 1; }
+    73.7%, 80.0%, 86.0%, 92.0% { opacity: 0.3; }
+    95.5%, 100% { opacity: 0; }
   }
-  @keyframes scoreOp0 { 0%, 15.5% { opacity: 1; } 15.6%, 100% { opacity: 0; } }
-  @keyframes scoreOp1 { 0%, 15.5% { opacity: 0; } 15.6%, 40.5% { opacity: 1; } 40.6%, 100% { opacity: 0; } }
-  @keyframes scoreOp2 { 0%, 40.5% { opacity: 0; } 40.6%, 68.7% { opacity: 1; } 68.8%, 100% { opacity: 0; } }
-  @keyframes scoreOp3 { 0%, 68.7% { opacity: 0; } 68.8%, 93.7% { opacity: 1; } 93.8%, 100% { opacity: 0; } }
-  @keyframes scoreOp4 { 0%, 93.7% { opacity: 0; } 93.8%, 100% { opacity: 1; } }
+  @keyframes scoreOp0 { 0%, 20.4% { opacity: 1; } 20.5%, 100% { opacity: 0; } }
+  @keyframes scoreOp1 { 0%, 20.4% { opacity: 0; } 20.5%, 45.4% { opacity: 1; } 45.4%, 100% { opacity: 0; } }
+  @keyframes scoreOp2 { 0%, 45.4% { opacity: 0; } 45.5%, 70.4% { opacity: 1; } 70.5%, 100% { opacity: 0; } }
+  @keyframes scoreOp3 { 0%, 70.4% { opacity: 0; } 70.5%, 95.4% { opacity: 1; } 95.5%, 100% { opacity: 0; } }
+  @keyframes scoreOp4 { 0%, 95.4% { opacity: 0; } 95.5%, 100% { opacity: 1; } }
 
 ]]></style>
 
@@ -491,10 +492,11 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 
 
 
+
   <!-- Retro Snake Game Arcade (Vertical) -->
-  <g transform="translate(1025, 405)" style="animation: fadeIn .4s ease 7.4s forwards; opacity: 0;">
+  <g transform="translate(1025, 210)" style="animation: fadeIn .4s ease 7.4s forwards; opacity: 0;">
     <!-- Outer Terminal Box -->
-    <rect x="0" y="0" width="105" height="160" rx="5" fill="#0d1117" stroke="#30363d" stroke-width="1.2"/>
+    <rect x="0" y="0" width="105" height="360" rx="5" fill="#0d1117" stroke="#30363d" stroke-width="1.2"/>
     
     <!-- Title Bar -->
     <rect x="0" y="0" width="105" height="16" rx="5" fill="#161b22"/>
@@ -524,16 +526,16 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
     <pattern id="game-grid-v" width="8" height="8" patternUnits="userSpaceOnUse">
       <circle cx="4" cy="4" r="0.2" fill="#30363d"/>
     </pattern>
-    <rect x="4" y="36" width="97" height="120" fill="url(#game-grid-v)"/>
+    <rect x="4" y="36" width="97" height="320" fill="url(#game-grid-v)"/>
 
     <!-- Game Screen Borders -->
-    <rect x="4" y="36" width="97" height="120" fill="none" stroke="#21262d" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <rect x="4" y="36" width="97" height="320" fill="none" stroke="#21262d" stroke-width="0.8" stroke-dasharray="2 2"/>
 
     <!-- Foods -->
-    <rect class="s-food f1" x="20" y="95" width="4" height="4" rx="1" fill="#ff5f57"/>
-    <rect class="s-food f2" x="50" y="145" width="4" height="4" rx="1" fill="#febc2e"/>
-    <rect class="s-food f3" x="80" y="85" width="4" height="4" rx="1" fill="#ff5f57"/>
-    <rect class="s-food f4" x="40" y="45" width="4" height="4" rx="1" fill="#febc2e"/>
+    <rect class="s-food f1" x="20" y="185" width="4" height="4" rx="1" fill="#ff5f57"/>
+    <rect class="s-food f2" x="50" y="320" width="4" height="4" rx="1" fill="#febc2e"/>
+    <rect class="s-food f3" x="80" y="185" width="4" height="4" rx="1" fill="#ff5f57"/>
+    <rect class="s-food f4" x="50" y="50" width="4" height="4" rx="1" fill="#febc2e"/>
 
     <!-- Snake Body Segments (delays follow the head) -->
     <rect class="s-body s-b4" width="4" height="4" rx="1" fill="#ff8844"/> <!-- Orange -->
