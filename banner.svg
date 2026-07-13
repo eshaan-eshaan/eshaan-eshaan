@@ -14,6 +14,8 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 .cur{animation:blink 1s step-end infinite}
 .sep{stroke:#1e2937;stroke-width:.5;opacity:.4}
 .matrix-col{font-size:9px;fill:#00ff88;opacity:0;animation:matrixRain 7s linear infinite;writing-mode:vertical-rl;text-orientation:upright;letter-spacing:4px}
+@keyframes glitch{0%,95%,100%{transform:translate(0) skewX(0);opacity:1}96%{transform:translate(-2px,1px) skewX(-3deg);opacity:.95;fill:#00ff88}97%{transform:translate(2px,-1px) skewX(3deg);opacity:.9;fill:#ff5f57}98%{transform:translate(-1px,1px) skewX(-1deg);opacity:.98;fill:#00ccff}99%{transform:translate(1px,-1px) skewX(1deg);opacity:.93;fill:#8b5cf6}}
+.glitch{animation:glitch 3.5s step-end infinite;transform-box:fill-box;transform-origin:left center}
   .pill{transition:transform .2s ease,filter .2s ease;transform-box:fill-box;transform-origin:center;cursor:pointer}
   .pill:hover{transform:scale(1.06);filter:brightness(1.2)}
   .pl-g1{fill:rgba(0,255,136,.12);stroke:#00ff88;stroke-width:.8}
@@ -324,7 +326,9 @@ text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
   <text clip-path="url(#gc)" x="488" y="82" font-size="15" fill="#8b949e">Hi 👋</text>
 
   <!-- Name -->
-  <text clip-path="url(#nc)" x="488" y="118" font-size="24" font-weight="bold" fill="url(#name-grad)">I'm Eshaan Guliani</text>
+  <g class="glitch">
+    <text clip-path="url(#nc)" x="488" y="118" font-size="24" font-weight="bold" fill="url(#name-grad)">I'm Eshaan Guliani</text>
+  </g>
 
   <!-- Separator 1 -->
   <line x1="488" y1="140" x2="1140" y2="140" class="sep" stroke-dasharray="650" stroke-dashoffset="650">
