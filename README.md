@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="./banner.svg?v=3.1.0" alt="Eshaan Guliani — Developer Profile" width="100%" />
+  <img src="./banner.svg?v=3.2.0" alt="Eshaan Guliani — Developer Profile" width="100%" />
 </p>
