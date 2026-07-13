@@ -1,10 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 610" width="1180" height="610">
 <defs>
 <style type="text/css"><![CDATA[
-text{font-family:'Courier New','Fira Code',monospace}
+text{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 @keyframes pulseGlow{0%,100%{opacity:.06}50%{opacity:.12}}
+@keyframes matrixRain{0%{transform:translateY(-150px);opacity:0}10%{opacity:.12}90%{opacity:.12}100%{transform:translateY(450px);opacity:0}}
 .al{opacity:0;font-size:11px;letter-spacing:0px;fill:url(#ascii-grad)}
 .cmd{font-size:11px}
 .ii{opacity:0}
@@ -12,6 +13,17 @@ text{font-family:'Courier New','Fira Code',monospace}
 .soc{opacity:0}
 .cur{animation:blink 1s step-end infinite}
 .sep{stroke:#1e2937;stroke-width:.5;opacity:.4}
+.matrix-col{font-size:9px;fill:#00ff88;opacity:0;animation:matrixRain 7s linear infinite;writing-mode:vertical-rl;text-orientation:upright;letter-spacing:4px}
+  .pill{transition:transform .2s ease,filter .2s ease;transform-box:fill-box;transform-origin:center;cursor:pointer}
+  .pill:hover{transform:scale(1.06);filter:brightness(1.2)}
+  .pl-g1{fill:rgba(0,255,136,.12);stroke:#00ff88;stroke-width:.8}
+  .pl-g2{fill:rgba(0,255,136,.04);stroke:rgba(0,255,136,.35);stroke-width:.6}
+  .pl-b1{fill:rgba(0,204,255,.12);stroke:#00ccff;stroke-width:.8}
+  .pl-b2{fill:rgba(0,204,255,.04);stroke:rgba(0,204,255,.35);stroke-width:.6}
+  .pl-p1{fill:rgba(139,92,246,.12);stroke:#8b5cf6;stroke-width:.8}
+  .pl-p2{fill:rgba(139,92,246,.04);stroke:rgba(139,92,246,.35);stroke-width:.6}
+  .pl-o1{fill:rgba(255,136,68,.12);stroke:#ff8844;stroke-width:.8}
+  .pl-o2{fill:rgba(255,136,68,.04);stroke:rgba(255,136,68,.35);stroke-width:.6}
 ]]></style>
 
 <!-- Gradients -->
@@ -94,11 +106,21 @@ text{font-family:'Courier New','Fira Code',monospace}
 <!-- ==================== LEFT PANEL: ASCII PORTRAIT ==================== -->
 <g>
   <!-- Terminal Frame -->
-  <rect x="25" y="25" width="408" height="560" rx="12" fill="#0d1117" stroke="#1e2937" stroke-width="1"/>
-  <rect x="25" y="25" width="408" height="32" rx="12" fill="#161b22"/>
-  <rect x="25" y="45" width="408" height="12" fill="#161b22"/>
+  <rect x="25" y="25" width="408" height="560" rx="12" fill="#0d1117" fill-opacity="0.85" stroke="rgba(0,255,136,0.15)" stroke-width="1.2"/>
+  <rect x="25" y="25" width="408" height="32" rx="12" fill="#161b22" fill-opacity="0.85"/>
+  <rect x="25" y="45" width="408" height="12" fill="#161b22" fill-opacity="0.85"/>
   <circle cx="47" cy="41" r="5" fill="#ff5f57"/><circle cx="67" cy="41" r="5" fill="#febc2e"/><circle cx="87" cy="41" r="5" fill="#28c840"/>
   <text x="229" y="46" text-anchor="middle" font-size="12" fill="#8b949e">portrait.sh</text>
+
+  <!-- Matrix Rain Overlay -->
+  <g clip-path="url(#lc)">
+    <text class="matrix-col" x="55" y="60" style="animation-delay:0s; animation-duration:8s">10100110101100110101</text>
+    <text class="matrix-col" x="95" y="60" style="animation-delay:3.5s; animation-duration:9s">0110101001101001</text>
+    <text class="matrix-col" x="135" y="60" style="animation-delay:1s; animation-duration:7.5s">100101101100101011</text>
+    <text class="matrix-col" x="325" y="60" style="animation-delay:2s; animation-duration:8.5s">011010010110101101</text>
+    <text class="matrix-col" x="365" y="60" style="animation-delay:4.5s; animation-duration:6.5s">1011001010110</text>
+    <text class="matrix-col" x="405" y="60" style="animation-delay:0.5s; animation-duration:10s">011010110011010101001</text>
+  </g>
 
   <!-- Commands -->
   <text clip-path="url(#c1)" x="40" y="80" class="cmd" fill="#00ff88">$ ./render --ascii --cyber</text>
@@ -259,9 +281,9 @@ text{font-family:'Courier New','Fira Code',monospace}
 <!-- ==================== RIGHT PANEL: TERMINAL ==================== -->
 <g>
   <!-- Terminal Frame -->
-  <rect x="460" y="25" width="700" height="560" rx="12" fill="#0d1117" stroke="#1e2937" stroke-width="1"/>
-  <rect x="460" y="25" width="700" height="32" rx="12" fill="#161b22"/>
-  <rect x="460" y="45" width="700" height="12" fill="#161b22"/>
+  <rect x="460" y="25" width="700" height="560" rx="12" fill="#0d1117" fill-opacity="0.85" stroke="rgba(0,204,255,0.15)" stroke-width="1.2"/>
+  <rect x="460" y="25" width="700" height="32" rx="12" fill="#161b22" fill-opacity="0.85"/>
+  <rect x="460" y="45" width="700" height="12" fill="#161b22" fill-opacity="0.85"/>
   <circle cx="482" cy="41" r="5" fill="#ff5f57"/><circle cx="502" cy="41" r="5" fill="#febc2e"/><circle cx="522" cy="41" r="5" fill="#28c840"/>
   <text x="810" y="46" text-anchor="middle" font-size="12" fill="#8b949e">eshaan — zsh</text>
 
@@ -316,34 +338,34 @@ text{font-family:'Courier New','Fira Code',monospace}
 
   <!-- ===== SKILL PILLS ===== -->
   <!-- Row 1: AI/ML (green) -->
-  <g class="pill" style="animation:fadeIn .3s ease 4.7s forwards"><rect x="488" y="355" width="46" height="22" rx="11" fill="rgba(0,255,136,.12)" stroke="#00ff88" stroke-width=".8"/><text x="511" y="370" text-anchor="middle" font-size="10" fill="#00ff88">AI/ML</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 4.78s forwards"><rect x="539" y="355" width="94" height="22" rx="11" fill="rgba(0,255,136,.04)" stroke="rgba(0,255,136,.35)" stroke-width=".6"/><text x="586" y="370" text-anchor="middle" font-size="10" fill="#00ff88">Deep Learning</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 4.86s forwards"><rect x="638" y="355" width="40" height="22" rx="11" fill="rgba(0,255,136,.04)" stroke="rgba(0,255,136,.35)" stroke-width=".6"/><text x="658" y="370" text-anchor="middle" font-size="10" fill="#00ff88">LLMs</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 4.94s forwards"><rect x="683" y="355" width="34" height="22" rx="11" fill="rgba(0,255,136,.04)" stroke="rgba(0,255,136,.35)" stroke-width=".6"/><text x="700" y="370" text-anchor="middle" font-size="10" fill="#00ff88">RAG</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 5.02s forwards"><rect x="722" y="355" width="34" height="22" rx="11" fill="rgba(0,255,136,.04)" stroke="rgba(0,255,136,.35)" stroke-width=".6"/><text x="739" y="370" text-anchor="middle" font-size="10" fill="#00ff88">NLP</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 5.1s forwards"><rect x="761" y="355" width="76" height="22" rx="11" fill="rgba(0,255,136,.04)" stroke="rgba(0,255,136,.35)" stroke-width=".6"/><text x="799" y="370" text-anchor="middle" font-size="10" fill="#00ff88">TensorFlow</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 4.7s forwards"><rect x="488" y="355" width="46" height="22" rx="11" class="pl-g1"/><text x="511" y="370" text-anchor="middle" font-size="10" fill="#00ff88">AI/ML</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 4.78s forwards"><rect x="539" y="355" width="94" height="22" rx="11" class="pl-g2"/><text x="586" y="370" text-anchor="middle" font-size="10" fill="#00ff88">Deep Learning</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 4.86s forwards"><rect x="638" y="355" width="40" height="22" rx="11" class="pl-g2"/><text x="658" y="370" text-anchor="middle" font-size="10" fill="#00ff88">LLMs</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 4.94s forwards"><rect x="683" y="355" width="34" height="22" rx="11" class="pl-g2"/><text x="700" y="370" text-anchor="middle" font-size="10" fill="#00ff88">RAG</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 5.02s forwards"><rect x="722" y="355" width="34" height="22" rx="11" class="pl-g2"/><text x="739" y="370" text-anchor="middle" font-size="10" fill="#00ff88">NLP</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 5.1s forwards"><rect x="761" y="355" width="76" height="22" rx="11" class="pl-g2"/><text x="799" y="370" text-anchor="middle" font-size="10" fill="#00ff88">TensorFlow</text></g>
 
   <!-- Row 2: Full-Stack (blue) -->
-  <g class="pill" style="animation:fadeIn .3s ease 5.18s forwards"><rect x="488" y="383" width="76" height="22" rx="11" fill="rgba(0,204,255,.12)" stroke="#00ccff" stroke-width=".8"/><text x="526" y="398" text-anchor="middle" font-size="10" fill="#00ccff">Full-Stack</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 5.26s forwards"><rect x="569" y="383" width="64" height="22" rx="11" fill="rgba(0,204,255,.04)" stroke="rgba(0,204,255,.35)" stroke-width=".6"/><text x="601" y="398" text-anchor="middle" font-size="10" fill="#00ccff">React.js</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 5.34s forwards"><rect x="638" y="383" width="58" height="22" rx="11" fill="rgba(0,204,255,.04)" stroke="rgba(0,204,255,.35)" stroke-width=".6"/><text x="667" y="398" text-anchor="middle" font-size="10" fill="#00ccff">Node.js</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 5.42s forwards"><rect x="701" y="383" width="52" height="22" rx="11" fill="rgba(0,204,255,.04)" stroke="rgba(0,204,255,.35)" stroke-width=".6"/><text x="727" y="398" text-anchor="middle" font-size="10" fill="#00ccff">Python</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 5.5s forwards"><rect x="758" y="383" width="64" height="22" rx="11" fill="rgba(0,204,255,.04)" stroke="rgba(0,204,255,.35)" stroke-width=".6"/><text x="790" y="398" text-anchor="middle" font-size="10" fill="#00ccff">Three.js</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 5.58s forwards"><rect x="827" y="383" width="46" height="22" rx="11" fill="rgba(0,204,255,.04)" stroke="rgba(0,204,255,.35)" stroke-width=".6"/><text x="850" y="398" text-anchor="middle" font-size="10" fill="#00ccff">Flask</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 5.18s forwards"><rect x="488" y="383" width="76" height="22" rx="11" class="pl-b1"/><text x="526" y="398" text-anchor="middle" font-size="10" fill="#00ccff">Full-Stack</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 5.26s forwards"><rect x="569" y="383" width="64" height="22" rx="11" class="pl-b2"/><text x="601" y="398" text-anchor="middle" font-size="10" fill="#00ccff">React.js</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 5.34s forwards"><rect x="638" y="383" width="58" height="22" rx="11" class="pl-b2"/><text x="667" y="398" text-anchor="middle" font-size="10" fill="#00ccff">Node.js</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 5.42s forwards"><rect x="701" y="383" width="52" height="22" rx="11" class="pl-b2"/><text x="727" y="398" text-anchor="middle" font-size="10" fill="#00ccff">Python</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 5.5s forwards"><rect x="758" y="383" width="64" height="22" rx="11" class="pl-b2"/><text x="790" y="398" text-anchor="middle" font-size="10" fill="#00ccff">Three.js</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 5.58s forwards"><rect x="827" y="383" width="46" height="22" rx="11" class="pl-b2"/><text x="850" y="398" text-anchor="middle" font-size="10" fill="#00ccff">Flask</text></g>
 
   <!-- Row 3: DevOps (purple) -->
-  <g class="pill" style="animation:fadeIn .3s ease 5.66s forwards"><rect x="488" y="411" width="52" height="22" rx="11" fill="rgba(139,92,246,.12)" stroke="#8b5cf6" stroke-width=".8"/><text x="514" y="426" text-anchor="middle" font-size="10" fill="#8b5cf6">DevOps</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 5.74s forwards"><rect x="545" y="411" width="52" height="22" rx="11" fill="rgba(139,92,246,.04)" stroke="rgba(139,92,246,.35)" stroke-width=".6"/><text x="571" y="426" text-anchor="middle" font-size="10" fill="#8b5cf6">Vercel</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 5.82s forwards"><rect x="602" y="411" width="52" height="22" rx="11" fill="rgba(139,92,246,.04)" stroke="rgba(139,92,246,.35)" stroke-width=".6"/><text x="628" y="426" text-anchor="middle" font-size="10" fill="#8b5cf6">Docker</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 5.9s forwards"><rect x="659" y="411" width="64" height="22" rx="11" fill="rgba(139,92,246,.04)" stroke="rgba(139,92,246,.35)" stroke-width=".6"/><text x="691" y="426" text-anchor="middle" font-size="10" fill="#8b5cf6">Firebase</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 5.98s forwards"><rect x="728" y="411" width="46" height="22" rx="11" fill="rgba(139,92,246,.04)" stroke="rgba(139,92,246,.35)" stroke-width=".6"/><text x="751" y="426" text-anchor="middle" font-size="10" fill="#8b5cf6">MySQL</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 6.06s forwards"><rect x="779" y="411" width="52" height="22" rx="11" fill="rgba(139,92,246,.04)" stroke="rgba(139,92,246,.35)" stroke-width=".6"/><text x="805" y="426" text-anchor="middle" font-size="10" fill="#8b5cf6">Render</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 5.66s forwards"><rect x="488" y="411" width="52" height="22" rx="11" class="pl-p1"/><text x="514" y="426" text-anchor="middle" font-size="10" fill="#8b5cf6">DevOps</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 5.74s forwards"><rect x="545" y="411" width="52" height="22" rx="11" class="pl-p2"/><text x="571" y="426" text-anchor="middle" font-size="10" fill="#8b5cf6">Vercel</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 5.82s forwards"><rect x="602" y="411" width="52" height="22" rx="11" class="pl-p2"/><text x="628" y="426" text-anchor="middle" font-size="10" fill="#8b5cf6">Docker</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 5.9s forwards"><rect x="659" y="411" width="64" height="22" rx="11" class="pl-p2"/><text x="691" y="426" text-anchor="middle" font-size="10" fill="#8b5cf6">Firebase</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 5.98s forwards"><rect x="728" y="411" width="46" height="22" rx="11" class="pl-p2"/><text x="751" y="426" text-anchor="middle" font-size="10" fill="#8b5cf6">MySQL</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 6.06s forwards"><rect x="779" y="411" width="52" height="22" rx="11" class="pl-p2"/><text x="805" y="426" text-anchor="middle" font-size="10" fill="#8b5cf6">Render</text></g>
 
   <!-- Row 4: Product (orange) -->
-  <g class="pill" style="animation:fadeIn .3s ease 6.14s forwards"><rect x="488" y="439" width="58" height="22" rx="11" fill="rgba(255,136,68,.12)" stroke="#ff8844" stroke-width=".8"/><text x="517" y="454" text-anchor="middle" font-size="10" fill="#ff8844">Product</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 6.22s forwards"><rect x="551" y="439" width="94" height="22" rx="11" fill="rgba(255,136,68,.04)" stroke="rgba(255,136,68,.35)" stroke-width=".6"/><text x="598" y="454" text-anchor="middle" font-size="10" fill="#ff8844">System Design</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 6.3s forwards"><rect x="650" y="439" width="34" height="22" rx="11" fill="rgba(255,136,68,.04)" stroke="rgba(255,136,68,.35)" stroke-width=".6"/><text x="667" y="454" text-anchor="middle" font-size="10" fill="#ff8844">N8N</text></g>
-  <g class="pill" style="animation:fadeIn .3s ease 6.38s forwards"><rect x="689" y="439" width="58" height="22" rx="11" fill="rgba(255,136,68,.04)" stroke="rgba(255,136,68,.35)" stroke-width=".6"/><text x="718" y="454" text-anchor="middle" font-size="10" fill="#ff8844">FastAPI</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 6.14s forwards"><rect x="488" y="439" width="58" height="22" rx="11" class="pl-o1"/><text x="517" y="454" text-anchor="middle" font-size="10" fill="#ff8844">Product</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 6.22s forwards"><rect x="551" y="439" width="94" height="22" rx="11" class="pl-o2"/><text x="598" y="454" text-anchor="middle" font-size="10" fill="#ff8844">System Design</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 6.3s forwards"><rect x="650" y="439" width="34" height="22" rx="11" class="pl-o2"/><text x="667" y="454" text-anchor="middle" font-size="10" fill="#ff8844">N8N</text></g>
+  <g class="pill" style="animation:fadeIn .3s ease 6.38s forwards"><rect x="689" y="439" width="58" height="22" rx="11" class="pl-o2"/><text x="718" y="454" text-anchor="middle" font-size="10" fill="#ff8844">FastAPI</text></g>
 
   <!-- Separator 4 -->
   <line x1="488" y1="478" x2="1140" y2="478" class="sep" stroke-dasharray="650" stroke-dashoffset="650">
