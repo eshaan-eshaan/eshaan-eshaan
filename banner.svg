@@ -5,7 +5,7 @@ text{font-family:'Courier New','Fira Code',monospace}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 @keyframes pulseGlow{0%,100%{opacity:.06}50%{opacity:.12}}
-.al{opacity:0;font-size:11px;fill:url(#ascii-grad)}
+.al{opacity:0;font-size:6.3px;letter-spacing:0.4px;fill:url(#ascii-grad)}
 .cmd{font-size:11px}
 .ii{opacity:0}
 .pill{opacity:0}
@@ -108,24 +108,51 @@ text{font-family:'Courier New','Fira Code',monospace}
   <!-- ASCII Art with Float -->
   <g>
     <animateTransform attributeName="transform" type="translate" values="0,0;0,-6;0,0" dur="4s" repeatCount="indefinite"/>
-    <text class="al" x="229" y="155" text-anchor="middle" style="animation:fadeIn .35s ease .5s forwards">                   ▄████████▄</text>
-    <text class="al" x="229" y="168" text-anchor="middle" style="animation:fadeIn .35s ease .63s forwards">                 ▄████████████▄</text>
-    <text class="al" x="229" y="181" text-anchor="middle" style="animation:fadeIn .35s ease .76s forwards">                ████████████████</text>
-    <text class="al" x="229" y="194" text-anchor="middle" style="animation:fadeIn .35s ease .89s forwards">               █████████████████</text>
-    <text class="al" x="229" y="207" text-anchor="middle" style="animation:fadeIn .35s ease 1.02s forwards">              ▐██████▀▀      ▀▀███</text>
-    <text class="al" x="229" y="220" text-anchor="middle" style="animation:fadeIn .35s ease 1.15s forwards">              █████▀  ▀▀    ▀▀  ▀███</text>
-    <text class="al" x="229" y="233" text-anchor="middle" style="animation:fadeIn .35s ease 1.28s forwards">              ████▌  ( ●)  ( ●)  ███</text>
-    <text class="al" x="229" y="246" text-anchor="middle" style="animation:fadeIn .35s ease 1.41s forwards">              ████▌      ▅       ███</text>
-    <text class="al" x="229" y="259" text-anchor="middle" style="animation:fadeIn .35s ease 1.54s forwards">              ████     ▄███▄     ███</text>
-    <text class="al" x="229" y="272" text-anchor="middle" style="animation:fadeIn .35s ease 1.67s forwards">              ████      ▀▀▀      ███</text>
-    <text class="al" x="229" y="285" text-anchor="middle" style="animation:fadeIn .35s ease 1.8s forwards">              ▐███▌             ▐███</text>
-    <text class="al" x="229" y="298" text-anchor="middle" style="animation:fadeIn .35s ease 1.93s forwards">               ████▄     :     ▄███</text>
-    <text class="al" x="229" y="311" text-anchor="middle" style="animation:fadeIn .35s ease 2.06s forwards">                ▀████▄ ░▒▒▒░ ▄███▀</text>
-    <text class="al" x="229" y="324" text-anchor="middle" style="animation:fadeIn .35s ease 2.19s forwards">                  ▀███████████▀</text>
-    <text class="al" x="229" y="337" text-anchor="middle" style="animation:fadeIn .35s ease 2.32s forwards">                    █████████</text>
-    <text class="al" x="229" y="350" text-anchor="middle" style="animation:fadeIn .35s ease 2.45s forwards">                  ▄███████████▄</text>
-    <text class="al" x="229" y="363" text-anchor="middle" style="animation:fadeIn .35s ease 2.58s forwards">                ▄████▀ ▐██▌ ▀████▄</text>
-    <text class="al" x="229" y="376" text-anchor="middle" style="animation:fadeIn .35s ease 2.71s forwards">              ▄████▀   ▐██▌   ▀████▄</text>
+        <text class="al" x="229" y="145.00" text-anchor="middle" style="animation:fadeIn .25s ease 0.50s forwards">                                                                         </text>
+    <text class="al" x="229" y="152.60" text-anchor="middle" style="animation:fadeIn .25s ease 0.54s forwards">                                                                         </text>
+    <text class="al" x="229" y="160.20" text-anchor="middle" style="animation:fadeIn .25s ease 0.58s forwards">                                                                         </text>
+    <text class="al" x="229" y="167.80" text-anchor="middle" style="animation:fadeIn .25s ease 0.62s forwards">                             %%%@%%%@@@@@@@                              </text>
+    <text class="al" x="229" y="175.40" text-anchor="middle" style="animation:fadeIn .25s ease 0.66s forwards">                           %%@@%%@@@@@@@@@@@@@                           </text>
+    <text class="al" x="229" y="183.00" text-anchor="middle" style="animation:fadeIn .25s ease 0.70s forwards">                         @@@%%@@@@@█@██@█@@@@@@                          </text>
+    <text class="al" x="229" y="190.60" text-anchor="middle" style="animation:fadeIn .25s ease 0.74s forwards">                        @@%%%%@@@%#**##%%@@@@@ @                         </text>
+    <text class="al" x="229" y="198.20" text-anchor="middle" style="animation:fadeIn .25s ease 0.78s forwards">                       @@@@%%%#+----===+*#%@@@@@@                        </text>
+    <text class="al" x="229" y="205.80" text-anchor="middle" style="animation:fadeIn .25s ease 0.82s forwards">                       █@@@@#+-::::-=+==+*#   @@@                        </text>
+    <text class="al" x="229" y="213.40" text-anchor="middle" style="animation:fadeIn .25s ease 0.86s forwards">                       @@@@%=--:-----===+###    @                        </text>
+    <text class="al" x="229" y="221.00" text-anchor="middle" style="animation:fadeIn .25s ease 0.90s forwards">                       %%%@#+**#%@%%*+#%@@@@@   @                        </text>
+    <text class="al" x="229" y="228.60" text-anchor="middle" style="animation:fadeIn .25s ease 0.94s forwards">                       %%%#+**#*@  *=:*@█%@@@   @                        </text>
+    <text class="al" x="229" y="236.20" text-anchor="middle" style="animation:fadeIn .25s ease 0.98s forwards">                       %@%--=+==**=:::=  %%     @                        </text>
+    <text class="al" x="229" y="243.80" text-anchor="middle" style="animation:fadeIn .25s ease 1.02s forwards">                       #@*:::..::..::.=  %###                            </text>
+    <text class="al" x="229" y="251.40" text-anchor="middle" style="animation:fadeIn .25s ease 1.06s forwards">                       =-*-::....-=++=#   ###  =                         </text>
+    <text class="al" x="229" y="259.00" text-anchor="middle" style="animation:fadeIn .25s ease 1.10s forwards">                      -:=++-:::::--*##%@@@ %  =+                         </text>
+    <text class="al" x="229" y="266.60" text-anchor="middle" style="animation:fadeIn .25s ease 1.14s forwards">                      =---+=---:=**####@@@                               </text>
+    <text class="al" x="229" y="274.20" text-anchor="middle" style="animation:fadeIn .25s ease 1.18s forwards">                       -:=+===--+%#++*#  @@                              </text>
+    <text class="al" x="229" y="281.80" text-anchor="middle" style="animation:fadeIn .25s ease 1.22s forwards">                           *=-=====*#%%                                  </text>
+    <text class="al" x="229" y="289.40" text-anchor="middle" style="animation:fadeIn .25s ease 1.26s forwards">                           +**+=====+*#%                                 </text>
+    <text class="al" x="229" y="297.00" text-anchor="middle" style="animation:fadeIn .25s ease 1.30s forwards">                           ==*##*===+##%                                 </text>
+    <text class="al" x="229" y="304.60" text-anchor="middle" style="animation:fadeIn .25s ease 1.34s forwards">                            --+#%%%%@@@@                                 </text>
+    <text class="al" x="229" y="312.20" text-anchor="middle" style="animation:fadeIn .25s ease 1.38s forwards">                            =-==++#%@@@                                  </text>
+    <text class="al" x="229" y="319.80" text-anchor="middle" style="animation:fadeIn .25s ease 1.42s forwards">                          %%=-====+*#%@       @                          </text>
+    <text class="al" x="229" y="327.40" text-anchor="middle" style="animation:fadeIn .25s ease 1.46s forwards">                         #@%=--====+*%@       ██                         </text>
+    <text class="al" x="229" y="335.00" text-anchor="middle" style="animation:fadeIn .25s ease 1.50s forwards">                        %@%%+-=====+*#%  @   @@@@                        </text>
+    <text class="al" x="229" y="342.60" text-anchor="middle" style="animation:fadeIn .25s ease 1.54s forwards">                    #%@@@@@@%+=====+*#%%%%@@@@@@@ @@                     </text>
+    <text class="al" x="229" y="350.20" text-anchor="middle" style="animation:fadeIn .25s ease 1.58s forwards">                 #%@@@@%@@@@@@#++++*#%%%%@@@@@@@@ @███@                  </text>
+    <text class="al" x="229" y="357.80" text-anchor="middle" style="animation:fadeIn .25s ease 1.62s forwards">              %@@@%%@@%@%%@@@%@%*++#%%##%%##%@@@@@@@@@@@@@               </text>
+    <text class="al" x="229" y="365.40" text-anchor="middle" style="animation:fadeIn .25s ease 1.66s forwards">           %@@@@%@%@@%%@%%%%@@@█@@#**+==++#@@@@@@@@@@@@@@@@@@@           </text>
+    <text class="al" x="229" y="373.00" text-anchor="middle" style="animation:fadeIn .25s ease 1.70s forwards">         @@@@@@%@@%@@%%%@@@@@@@@@@█@*=--*%█@██@██@█@@█@@@@@@@@@@@        </text>
+    <text class="al" x="229" y="380.60" text-anchor="middle" style="animation:fadeIn .25s ease 1.74s forwards">       %@@@%@@%@@@@█@%%%@@@@@@@@@@@@@*+%██@@@@█@@@@@@@@@@@@@@@@@@@       </text>
+    <text class="al" x="229" y="388.20" text-anchor="middle" style="animation:fadeIn .25s ease 1.78s forwards">       @@@@@@@%@@%@█@%%@@@@@@@@@@@@@@@@█@@█@██@@@@@@@@@@@@@@@@@@@@@      </text>
+    <text class="al" x="229" y="395.80" text-anchor="middle" style="animation:fadeIn .25s ease 1.82s forwards">      @@@@@@@@@█@%@@@%@@@@@@@@@@@@@@@@█@@@@@@@@@@@@@@@@@@@@@@@@@@@@      </text>
+    <text class="al" x="229" y="403.40" text-anchor="middle" style="animation:fadeIn .25s ease 1.86s forwards">     %@@@@@@@@@█@@█@%%@@@@@@@@@@@@@@@█@@@@@@@@@@@@@@@@@@@@@@@█@@█@@@     </text>
+    <text class="al" x="229" y="411.00" text-anchor="middle" style="animation:fadeIn .25s ease 1.90s forwards">     @@@@@@@@@@█@@█@%@@@@@@@@@@@@@@@█@@@@@@@@@@@@@@@@@@@@@█@@@@█@@@@     </text>
+    <text class="al" x="229" y="418.60" text-anchor="middle" style="animation:fadeIn .25s ease 1.94s forwards">     @@@@@@@@@@█@@@@@@@@@@@@@@@@@█@@@@@@@@@@@@@@@@@@@@█@@@@@@@█@@@█@     </text>
+    <text class="al" x="229" y="426.20" text-anchor="middle" style="animation:fadeIn .25s ease 1.98s forwards">    @@@@@@@@@@@@@@@@@@@@@@@@@@@@█@@@@@@@@@@@@@@@@@@@@@██@@@█@██@@█@@@    </text>
+    <text class="al" x="229" y="433.80" text-anchor="middle" style="animation:fadeIn .25s ease 2.02s forwards">    @@@@@@@@@@@@@@█@@@@@@@@@@@@@█@@@@@@@@@@@@@@@@@@@@@██@@████@@██@@@    </text>
+    <text class="al" x="229" y="441.40" text-anchor="middle" style="animation:fadeIn .25s ease 2.06s forwards">    @@@@@@@@@@█@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@███@███@██@@@@█    </text>
+    <text class="al" x="229" y="449.00" text-anchor="middle" style="animation:fadeIn .25s ease 2.10s forwards">   @@@@@@@@@@@█@@@@@@@@@@@@@@@@@@@@@@@@@█@@@@@@@@@@@@@███@███@@@@@@█@@   </text>
+    <text class="al" x="229" y="456.60" text-anchor="middle" style="animation:fadeIn .25s ease 2.14s forwards">   @@@@@@@@@@@█@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@███████@@@@@███@@   </text>
+    <text class="al" x="229" y="464.20" text-anchor="middle" style="animation:fadeIn .25s ease 2.18s forwards">   @@@@@@@@@@@█@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@███████@@@@██@@@@   </text>
+    <text class="al" x="229" y="471.80" text-anchor="middle" style="animation:fadeIn .25s ease 2.22s forwards">   @@@@@@@@@@@██@@@@@@@@@@@@@@@█@@@@@█@@@@@@@█@@@@@@@███████@@@█@@@@@@   </text>
+    <text class="al" x="229" y="479.40" text-anchor="middle" style="animation:fadeIn .25s ease 2.26s forwards">   @@@@@@@@@@@@█@@@@@@@@@@@@███@@@@@@█@@@@@@@@█@@@@@@██████@@@@@@@@@@@@  </text>
   </g>
 
   <!-- Scanline -->
